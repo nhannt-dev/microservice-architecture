@@ -1,0 +1,12 @@
+// Khởi động kafka
+zookeeper-server-start.bat C:\kafka_2.13-3.6.0\config\zookeeper.properties
+
+// Config server
+kafka-server-start.bat C:\kafka_2.13-3.6.0\config\server.properties
+
+#Command kafka
+// Khởi tạo topic
+kafka-topics.bat --create --topic nhannt --bootstrap-server localhost:9092
+
+// Kiểm tra xem có topic nào đã được tạo hay chưa
+kafka-topics.bat --list --bootstrap-server localhost:9092
